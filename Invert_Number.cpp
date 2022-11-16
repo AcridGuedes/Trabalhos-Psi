@@ -1,4 +1,4 @@
-/*Escreva um algoritmo em psedocodigo ou c++ que leia um número inteiro, de qualquer dimensão, e inverta os seus algoritmos.*/
+/*Escreva um algoritmo em pseudócodigo ou c++ que leia um número inteiro, de qualquer dimensão, e inverta os seus algoritmos.*/
 #include <iostream>
 #include <cstdlib>
 using namespace std;
