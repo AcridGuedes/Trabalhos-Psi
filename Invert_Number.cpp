@@ -11,7 +11,7 @@ int main() {
 		num = num / 10;
 		final = final * 10 + resto;
 	}
-	cout <<"O numero escolhido invertido e = "<< final;
+	cout <<"O numero invertido e => "<< final;
 
 	return 0;
 }
