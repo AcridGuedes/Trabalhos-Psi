@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-	int n = 0, cont = -1, soma = 1,media = 0, max = -99999999;
-	while (n != -1) {
+	int n = 0, cont = -1, soma = 1, max = -99999999;
+	float media = 0;
+		while (n != -1) {
 		cout << "Escreva os levantamentos para acabar escreva -1: ";
 		cin >> n;
 		cont = cont + 1;
@@ -14,9 +15,9 @@ int main() {
 			max = n;
 		}
 
-		}
-	media = soma / cont;
-	cout << "Tens "<<cont<< " levantamentos!";
-	cout << "\nA media e " << media<<"!";
-	cout << "\nO maior levantamento e " << max<<"!";
+	}
+	media = (float) soma / cont;
+	cout << "Tens " << cont << " levantamentos!";
+	cout << "\nA media e " << media << "!";
+	cout << "\nO maior levantamento e " << max << "!";
 }
