@@ -7,25 +7,24 @@
 
 using namespace std;
 int main() {
-	string nome_prod = "", prodmax = "", decoy="";
-	float preco_unit, quant, preco_max = 0, preco_final = 0, total = 0;
-		while (nome_prod != "fim"){
+	string nome_prod = "", prodmax = "popi", decoy="";
+	float preco_unit, quant, preco_max = -99999, preco_final = 0, total = 0;
+	while (nome_prod != "fim"){
 		cout << "Nome do produto: ";
+		cin >> ws;
 		getline(cin, nome_prod);
-		if (nome_prod == "fim") {
-			break;
+		if (nome_prod != "fim") {
+			cout << "Quantidade: ";
+			cin >> quant;
+			cout << "Preco do produto: ";
+			cin >> preco_unit;
+			total = quant * preco_unit;
+			preco_final = preco_final + total;
+			if (preco_unit > preco_max) {
+				preco_max = preco_unit;
+				prodmax = nome_prod;
+			}
 		}
-		cout << "Quantidade: ";
-		cin >> quant;
-		cout << "Preco do produto: ";
-		cin >> preco_unit;
-		total = quant * preco_unit;
-		preco_final = preco_final + total;
-		if (preco_unit > preco_max) {
-			preco_max = preco_unit;
-			prodmax = nome_prod;
-		}
-		getline(cin, decoy);
 	} 
 	cout << "\nO total a pagar e " <<preco_final<<" Euros.";
 	cout << "\nO produto mais caro e " << prodmax;
