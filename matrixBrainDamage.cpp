@@ -14,29 +14,21 @@ ex:  linha 0:   3   5   6
 
 using namespace std;
 
-int main()
-{
-    
-    int m[4][3],total, s=0;
-    for (int i=0;i<3;i++){
-        total=0;
-        for(int j=0;j<3;j++){
-            cout<<"m["<<i<<"]["<<j<<"]:";
-            cin>>m[i][j];
-            total += m[i][j];
+int main(){
+    int num, k[4][3]={{0,0,0},{0,0,0},{0,0,0},{0,0,0}};
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout<<"k["<<i<<"]["<<j<<"]:";
+            cin>>k[i][j];
+            k[3][j]=k[3][j]+k[i][j];
         }
-        
-        m[3][i] = total;
-        cout<<total<<" = "<<i<<"\n";
     }
-    for (int i = 0; i < 4;i++){
-        
-    }
-    for(int i=0;i<4;i++){
+    
+      for(int i=0;i<4;i++){
         for(int j=0;j<3;j++){
-            cout<<m[i][j]<<"   ";
+            cout<<k[i][j]<<"   ";
         }
         cout<<endl;
     }
-    return 0;
 }
